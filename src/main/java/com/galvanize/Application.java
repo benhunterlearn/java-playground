@@ -10,6 +10,8 @@ public class Application {
 
         // test grade()
         System.out.println(Application.grade(100));  // A
+        assert Application.grade(100).equals("A");
+
         System.out.println(Application.grade(80));  // B
         System.out.println(Application.grade(79));  // C
         System.out.println(Application.grade(60));  // D
@@ -30,6 +32,11 @@ public class Application {
         for (int i = 2; i <= 6; i += 2) {
             System.out.println(i);
         }
+
+        String one = "word";
+        String two = "word";
+
+        Application.test_FormatNameEmail();
     }
 
     public static String constString() {
@@ -54,5 +61,9 @@ public class Application {
             grade = "F";
         }
         return grade;
+    }
+
+    public static void test_FormatNameEmail() {
+        assert false;
     }
 }
