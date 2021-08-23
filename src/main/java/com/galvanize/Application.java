@@ -1,7 +1,25 @@
 package com.galvanize;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+
 public class Application {
     public static void main(String[] args) {
+
+
+
+//        Fruit banana = new Fruit();
+//        banana.setSize("for scale");
+//        banana.setType("banana");
+//        banana.setColor("black");
+//
+//        System.out.println(banana.toString());
+    }
+
+    void miscCode() {
+//        System.out.println(args[0] + " <" + args[1] + ">");
+
         System.out.println("hello world");
         System.out.println(Application.constString());
 
@@ -65,5 +83,36 @@ public class Application {
 
     public static void test_FormatNameEmail() {
         assert false;
+    }
+
+    // Implement the sortArray method below
+    public static ArrayList sortArray(String[] inputArray) {
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(inputArray));
+        arrayList.sort(null);
+        return arrayList;
+
+        // doesn't work to sort() on same line as instantiation
+        // new ArrayList returns a void
+//        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(inputArray));
+        // sort() returns a void
+//        return arrayList.sort(null);
+
+        // fails because the constructor and sort both return void
+//        return (new ArrayList<>(Arrays.asList(inputArray))).sort(null);
+    }
+
+    public static HashMap<Integer, String> genHashMap() {
+        /*
+        For the given method signature, write an implementation that generates a HashMap,
+         adds the following two items, and returns this new HashMap.
+
+        The string, "Airplane", associated with key 747
+        The string, "Laphroaig", associated with key 10
+        */
+        HashMap hashMap = new HashMap();
+        hashMap.put(747, "Airplane");
+        hashMap.put(10, "Laphroaig");
+
+        return hashMap;
     }
 }
